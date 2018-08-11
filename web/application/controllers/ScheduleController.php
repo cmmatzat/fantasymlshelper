@@ -31,8 +31,15 @@ class ScheduleController extends Controller
     $pageCss = CSS_PATH . 'schedule.css';
     $secondaryNav = false;
     $content = VIEW_PATH . 'schedule.php';
-    $schedule = $this->getSeasonSchedule($args[0], $this->schedule);
-
+    $season = strtolower($args[0]);
+    if (($season == NULL) || !(($season == 'fall') || ($season == 'spring')))
+    {
+      $round = $this->getCurrentRound($this->schedule);
+      $season = $round[0]['season'];
+    }
+    
+    $schedule = $this->getSeasonSchedule($season, $this->schedule);
+    
     require($this->templates['header']);
     require($this->templates['navbar']);
     require($this->templates['body']);
@@ -44,8 +51,16 @@ class ScheduleController extends Controller
     $pageCss = CSS_PATH . 'schedule.css';
     $secondaryNav = false;
     $content = VIEW_PATH . 'schedule.php';
-    $schedule = $this->getRoundSchedule($args[0], $this->schedule;
 
+    if (($args[0] != NULL) && ($args[0] > 0) && ($args[0] < 36))
+    {
+      $schedule = $this->getRoundSchedule($args[0], $this->schedule;
+    }
+    else
+    {
+      $schedule = $this->getCurrentRound($this->schedule);
+    }
+    
     require($this->templates['header']);
     require($this->templates['navbar']);
     require($this->templates['body']);
@@ -93,7 +108,17 @@ class ScheduleController extends Controller
 
   private function getCurrentRound($schedule)
   {
-    // TODO
+    $roundSchedule = array();
+    foreach ($fullSchedule as $round)
+    {
+      if ($round['status'] != "complete")
+      {
+        $roundSchedule[] = $round;
+        break;
+      }
+    }
+
+    return $roundSchedule;
   }
 
 }
