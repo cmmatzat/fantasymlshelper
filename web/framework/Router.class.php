@@ -1,36 +1,36 @@
 <?php
-	class Router {
+  class Router {
 
-		public function __constuct()
-		{
-			
-		}
-		
+    public function __constuct()
+    {
+      
+    }
+    
     // Handle the given page request
-		public function route($request)
-		{
+    public function route($request)
+    {
       // Break the URI into parts
-			$uri = trim($request, '/');
-			$uri = explode('/', $uri);
+      $uri = trim($request, '/');
+      $uri = explode('/', $uri);
 
       // Select the appropriate controller
-			$controllerClass = Router::getController($uri[0]);
-			array_shift($uri);
+      $controllerClass = Router::getController($uri[0]);
+      array_shift($uri);
       
       // Create new controller
-			$controller = new $controllerClass;
+      $controller = new $controllerClass;
 
       // Select and call controller method
-			$method = method_exists($controller, strtolower($uri[0])) ? $uri[0] : $controller->getDefaultMethod();
-			array_shift($uri);
-			$controller->$method($uri);
-		}
+      $method = method_exists($controller, strtolower($uri[0])) ? $uri[0] : $controller->getDefaultMethod();
+      array_shift($uri);
+      $controller->$method($uri);
+    }
 
     // Format a controller class name to get the class filepath
-		private static function controllerPath($controllerClassName)
-		{
-			return CONTROLLER_PATH . $controllerClassName . '.class.php';
-		}
+    private static function controllerPath($controllerClassName)
+    {
+      return CONTROLLER_PATH . $controllerClassName . '.class.php';
+    }
     
     // Determine the appropriate class given the argument
     private static function getController($uri0)
@@ -51,5 +51,5 @@
       return $controllerClass;
     }
 
-	}
+  }
 ?>
