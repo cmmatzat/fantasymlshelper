@@ -22,6 +22,22 @@
     align-content: center;
 }
 
+.flexcol-jst {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flext-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.flexcol-wr-jst {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
 .flex-strict {
 	flex: 0 0 auto;
 }

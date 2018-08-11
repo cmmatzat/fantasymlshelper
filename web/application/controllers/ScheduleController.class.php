@@ -54,7 +54,7 @@ class ScheduleController extends Controller
 
     if (($args[0] != NULL) && ($args[0] > 0) && ($args[0] < 36))
     {
-      $schedule = $this->getRoundSchedule($args[0], $this->schedule;
+      $schedule = $this->getRoundSchedule($args[0], $this->schedule);
     }
     else
     {
