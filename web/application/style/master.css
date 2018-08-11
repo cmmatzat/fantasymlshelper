@@ -1,4 +1,19 @@
 * {
-  margin: 0;
-  padding: 0;
+    font-family: Verdana;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: gray;
+}
+
+#page-content {
+    background-color: #DDDDDD;
+    height: 100%;
+    width: 75%;
+    min-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

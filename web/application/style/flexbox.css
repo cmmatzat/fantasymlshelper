@@ -1,0 +1,49 @@
+.flexrow {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.flexrow-wr {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.flexcol {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.flexcol-wr {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+
+
+.flex-strict {
+	flex: 0 0 auto;
+}
+
+.flex-grow {
+	flex: 1 0 auto;
+}
+
+.flex-shrink {
+	flex: 0 1 auto;
+}
+
+.flex-all {
+	flex: 1 1 auto;
+}
