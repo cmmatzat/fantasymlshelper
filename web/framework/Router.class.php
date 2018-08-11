@@ -21,7 +21,7 @@
 			$controller = new $controllerClass;
 
       // Select and call controller method
-			$method = method_exists($controller, strtolower($uri[0])) ? $uri[0] : 'index';
+			$method = method_exists($controller, strtolower($uri[0])) ? $uri[0] : $controller->getDefaultMethod();
 			array_shift($uri);
 			$controller->$method($uri);
 		}
@@ -36,7 +36,7 @@
     private static function getController($uri0)
     {
       // Check if a class is given
-      $controllerClass = ($uri0 == NULL) ? DEFAULT_CONTROLLER : ucfirst(strtolower($uri0)) . 'Controller';
+      $controllerClass = ($uri0 == NULL) ? 'IndexController' : ucfirst(strtolower($uri0)) . 'Controller';
       
       // Check controller directory for the class
       $controller_dir = scandir(CONTROLLER_PATH);

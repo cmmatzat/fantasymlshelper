@@ -8,7 +8,7 @@ class DefaultController extends Controller
     parent::__construct();
   }
 
-  public function index($args)
+  public function index($args = false)
   {
     echo "default/index.php";
   }

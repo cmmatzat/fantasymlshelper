@@ -6,7 +6,9 @@
   define("FRAMEWORK_PATH", ROOT . "framework" . DS);
   define("APP_PATH", ROOT . "application" . DS);
   
+  define("CSS_PATH", APP_PATH . "style" . DS);
   define("CONTROLLER_PATH", APP_PATH . "controllers" . DS);
+  define("TEMPLATE_PATH", APP_PATH . "templates" . DS);
   define("VIEW_PATH", APP_PATH . "views" . DS);
 
 

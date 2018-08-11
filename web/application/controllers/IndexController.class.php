@@ -8,9 +8,9 @@ class IndexController extends Controller
     parent::__construct();
   }
 
-  public function index($args)
+  public function index($args = false)
   {
-    echo "index.php";
+    parent::index($args);
   }
 
 }
