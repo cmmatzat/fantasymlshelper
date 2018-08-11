@@ -37,7 +37,32 @@ class ScheduleController extends Controller
       $round = $this->getCurrentRound($this->schedule);
       $season = $round[0]['season'];
     }
+    $schedule = $this->getSeasonSchedule($season, $this->schedule);
     
+    require($this->templates['header']);
+    require($this->templates['navbar']);
+    require($this->templates['body']);
+  }
+
+  public function fall($args = false)
+  {
+    $pageCss = CSS_PATH . 'schedule.css';
+    $secondaryNav = false;
+    $content = VIEW_PATH . 'schedule.php';
+    $season = 'fall';
+    $schedule = $this->getSeasonSchedule($season, $this->schedule);
+    
+    require($this->templates['header']);
+    require($this->templates['navbar']);
+    require($this->templates['body']);
+  }
+
+  public function spring($args = false)
+  {
+    $pageCss = CSS_PATH . 'schedule.css';
+    $secondaryNav = false;
+    $content = VIEW_PATH . 'schedule.php';
+    $season = 'spring';
     $schedule = $this->getSeasonSchedule($season, $this->schedule);
     
     require($this->templates['header']);
@@ -109,7 +134,7 @@ class ScheduleController extends Controller
   private function getCurrentRound($schedule)
   {
     $roundSchedule = array();
-    foreach ($fullSchedule as $round)
+    foreach ($schedule as $round)
     {
       if ($round['status'] != "complete")
       {
