@@ -191,6 +191,7 @@ def getRoundData( mls_round ):
     #=============================
     fmh_round['round'] = mls_round['id']
     fmh_round['season'] = mls_round['type']
+    fmh_round['status'] = mls_round['status']
     fmh_round['matches'] = []
     for mls_match in mls_round['matches']:
         fmh_round['matches'].append( getMatchData( mls_match ) )
