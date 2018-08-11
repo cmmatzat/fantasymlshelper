@@ -18,19 +18,9 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
+    align-items: center;
+    align-content: center;
 }
-
-.flexcol-wr {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-}
-
-
 
 .flex-strict {
 	flex: 0 0 auto;
