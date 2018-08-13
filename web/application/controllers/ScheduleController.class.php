@@ -19,6 +19,8 @@ class ScheduleController extends Controller
     $content = VIEW_PATH . 'schedule.php';
     $schedule = $this->schedule;
 
+    print_r($schedule);
+
     require($this->templates['header']);
     require($this->templates['navbar']);
     require($this->templates['body']);

@@ -91,7 +91,59 @@
     font-size: 16pt;
 }
 
+.bye {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    margin: 20px 10px 0px 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
+.bye-title {
+    height: 24px;
+    width: 100%;
+    color: white;
+    font-size: 12pt;
+    line-height: 24px;
+    text-align: center;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    background-color: green;
+}
+
+.bye-squads img {
+    height: 50px;
+    width: 50px;
+    margin: 0 4px 0 4px;
+}
+
+.dgw {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    margin: 20px 10px 0px 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dgw-title {
+    height: 24px;
+    width: 100%;
+    color: white;
+    font-size: 12pt;
+    line-height: 24px;
+    text-align: center;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    background-color: purple;
+}
+
+.dgw-squads img {
+    height: 50px;
+    width: 50px;
+    margin: 0 4px 0 4px;
+}
 
 
 
